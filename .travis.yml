@@ -19,7 +19,6 @@ before_script:
 script:
 #- "./gradlew assembleRelease"
 - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./gradlew assembleDebug; fi'
-- 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then ./gradlew assembleRelease; fi'
 before_deploy:
   - echo gitVersion
   - git rev-list --all --count
