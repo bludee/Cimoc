@@ -17,8 +17,8 @@ jdk:
 before_script:
 - chmod +x gradlew
 script:
-#- "./gradlew assembleRelease"
-- 'if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./gradlew assembleDebug; fi'
+- "./gradlew assembleRelease"
+#- 'if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./gradlew assembleDebug; fi'
 before_deploy:
   - echo gitVersion
   - git rev-list --all --count
